@@ -53,7 +53,7 @@ POSTMAN can be used for post request. The GET request can be done with POSTMAN b
 	RESPONSE=The webpage mapped to that shorted url
 	```
 	
-	IMPORTANT: These uris work for docker toolbox because thats the address it runs on. If using docker desktop localhost may be better here.
+	**_IMPORTANT: These uri's work for docker toolbox because thats the address it runs on (192.168.99.100). If your using docker desktop then 'localhost' may be better here. So if your using Docker Desktop and request isnt successful try localhost:8080**_
 
 ## **_VIEWING LOGS:_**
 -To view logs for the API run docker command: 
