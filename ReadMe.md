@@ -4,7 +4,9 @@
 To do Docker related tasks for this project I used Docker Toolbox (Cant install docker desktop on windows 10 home). Considering this there may some configurations
 present that may not be the same in docker desktop (which you may likely have if your own windows 10 pro or enterprise) for example the uri string to the database is:
 
+```
 spring.datasource.url=jdbc:mysql://192.168.99.100:3306/db_url
+```
 
 The IP 192.168.99.100 is unique to docker toolbox. Using localhost didnt work. If you dont use Docker toolbox to download from docker hub this configuration
 may possibly not work. 
@@ -52,12 +54,21 @@ POSTMAN can be used for post request. The GET request can be done with POSTMAN b
 
 ## **_VIEWING LOGS:_**
 -To view logs for the API run docker command: 
+
+```
 docker container logs -f <container_id>
+```
 
 ## **_ACCESSING THE DATABASE:_**
 To open and view the database and data inside you can do the following: 
+
+```
 docker container exec -it <container_id> bash
+```
 
 Then login to the database:
+
+```
 mysql -uroot -pPASSWORD;
+```
 
