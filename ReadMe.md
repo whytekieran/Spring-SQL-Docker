@@ -15,8 +15,11 @@ I cannot test with docker desktop and adding the ip of docker toolbox may be spe
 toolbox which always comes with default ip 192.168.99.100 for pulling and running the containers.	
 	
 Possible workaround:
-The download links are below in the "downloading" section. One of the images you will download is "short-url-api:v1.0". If this gives trouble with db connection you can 	 try changing to v2.0 which doesnt use the ip address mentioned above instead it uses the name of the container "mysqldb" in the connection string. 
-eg spring.datasource.url=jdbc:mysql://mysqldb:3306/db_url
+The download links are below in the "downloading" section. One of the images you will download is _"short-url-api:v1.0"_. If this gives trouble with db connection you can 	 try changing to v2.0 which doesnt use the ip address mentioned above instead it uses the name of the container "mysqldb" in the connection string. 
+
+```
+spring.datasource.url=jdbc:mysql://mysqldb:3306/db_url
+```
 
 ## **_OVERVIEW OF TECH USED:_**
 Spring boot, Spring MVC, Spring JPA, MySQL, Docker, Docker Toolbox, Git
