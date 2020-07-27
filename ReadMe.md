@@ -33,7 +33,7 @@ Spring boot, Spring MVC, Spring JPA, MySQL, Docker, Docker Toolbox, Git
 
 	1. Create a new shortened url. Involves a POST request and a JSON body containing the URL the user wants shortened
 	
-	```
+	```java
 	METHOD=POST
 	URL=http://192.168.99.100:8080/
 	BODY={"fullUrl":"https://www.facebook.com/"}
