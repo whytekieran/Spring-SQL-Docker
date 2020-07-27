@@ -2,7 +2,7 @@
 
 ## **_IMPORTANT:_**
 To do Docker related tasks for this project I used Docker Toolbox (Cant install docker desktop on windows 10 home). Considering this there may some configurations
-present that may not be the same in docker desktop (which you may likely have if your own windows 10 pro or enterprise) for example the uri string to the database is:
+present that may not be the same in docker desktop (which you may likely have if you running windows 10 pro or enterprise) for example the uri string to the database is:
 
 ```
 spring.datasource.url=jdbc:mysql://192.168.99.100:3306/db_url
