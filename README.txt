@@ -18,7 +18,7 @@ IMPORTANT:
 	eg spring.datasource.url=jdbc:mysql://mysqldb:3306/db_url
 	
 OVERVIEW OF TECH USED:
-Spring boot, Spring MVC, Spring JPA, MySQL, Docker, Git
+Spring boot, Spring MVC, Spring JPA, MySQL, Docker, Docker Toolbox, Git
 
 DOWNLOADING:
 	The application runs in two separate docker containers that are on my own repository on docker hub, you can download and run them both here: (run in order)
@@ -40,11 +40,20 @@ API and ENDPOINTS:
 	URL=http://192.168.99.100:8080/<random_string>
 	RESPONSE=The webpage mapped to that shorted url
 	
-	IMPORTANT: These uris work for docker toolbox because thats the address it runs on. If using docker desktop localhost maybe better.
-	
-GITHUB
+	IMPORTANT: These uris work for docker toolbox because thats the address it runs on. If using docker desktop localhost may be better here.
 
-Links to the codebase on github can be found here:
+VIEWING LOGS:
+-To view logs for the API run docker command: 
+docker container logs -f <container_id>
+
+ACCESSING THE DATABASE:
+To open and view the database and data inside you can do the following: 
+docker container exec -it <container_id> bash
+
+Then login to the database:
+mysql -uroot -pPASSWORD;
+
+
 
 	
 	
