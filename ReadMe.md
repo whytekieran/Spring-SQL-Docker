@@ -14,7 +14,7 @@ may possibly not work.
 I cannot test with docker desktop and adding the ip of docker toolbox may be specific for this project, considering this id recommend the easiest solution is using docker
 toolbox (which always comes with default ip 192.168.99.100) for pulling and running the containers.	
 	
-Possible workaround:
+**_Possible workaround:_**
 The download links are below in the "downloading" section. One of the images you will download is _"short-url-api:v1.0"_. If this gives trouble with db connection you can 	 try changing to v2.0 which doesnt use the ip address mentioned above instead it uses the name of the container "mysqldb" in the connection string. 
 
 ```
