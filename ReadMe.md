@@ -20,28 +20,28 @@ eg spring.datasource.url=jdbc:mysql://mysqldb:3306/db_url
 Spring boot, Spring MVC, Spring JPA, MySQL, Docker, Docker Toolbox, Git
 
 ## **_DOWNLOADING:_**
-	The application runs in two separate docker containers that are on my own repository on docker hub, you can download and run them both here: (run in order)
+The application runs in two separate docker containers that are on my own repository on docker hub, you can download and run them both here: (run in order)
 	
-	```
-	docker container run -p 3306:3306 --name mysqldb --network url-mysql -e MYSQL_ROOT_PASSWORD=PASSWORD -e MYSQL_DATABASE=db_url -d whytekieran/mysqldb:v1.0
-	docker container run -p 8080:8080 --network url-mysql --name short-url-api -d whytekieran/short-url-api:v1.0
-	```
+```
+docker container run -p 3306:3306 --name mysqldb --network url-mysql -e MYSQL_ROOT_PASSWORD=PASSWORD -e MYSQL_DATABASE=db_url -d whytekieran/mysqldb:v1.0
+docker container run -p 8080:8080 --network url-mysql --name short-url-api -d whytekieran/short-url-api:v1.0
+```
 	
 ## **_API and ENDPOINTS:_**
-	I created a basic API consisting of two endpoints (uri may vary depending if this is docker toolbox or desktop your using):
-	POSTMAN can be used for post request. The GET request can be done with POSTMAN but will visually look better in browser.
+I created a basic API consisting of two endpoints (uri may vary depending if this is docker toolbox or desktop your using):
+POSTMAN can be used for post request. The GET request can be done with POSTMAN but will visually look better in browser.
 
-	1. Create a new shortened url. Involves a POST request and a JSON body containing the URL the user wants shortened
+1. Create a new shortened url. Involves a POST request and a JSON body containing the URL the user wants shortened
 	
-	```java
+	```
 	METHOD=POST
 	URL=http://192.168.99.100:8080/
 	BODY={"fullUrl":"https://www.facebook.com/"}
 	RESPONSE=<random_string>
 	```
 	
-	2. Forwarding of shortened urls. Involves passing a shorted url into the API which then forwards it to the mapped real url.
-	
+2. Forwarding of shortened urls. Involves passing a shorted url into the API which then forwards it to the mapped real url.
+
 	```
 	METHOD=GET
 	URL=http://192.168.99.100:8080/<random_string>
@@ -52,20 +52,12 @@ Spring boot, Spring MVC, Spring JPA, MySQL, Docker, Docker Toolbox, Git
 
 ## **_VIEWING LOGS:_**
 -To view logs for the API run docker command: 
-
-```
 docker container logs -f <container_id>
-```
 
 ## **_ACCESSING THE DATABASE:_**
 To open and view the database and data inside you can do the following: 
-
-```
 docker container exec -it <container_id> bash
-```
 
 Then login to the database:
-
-```
 mysql -uroot -pPASSWORD;
-```
+
