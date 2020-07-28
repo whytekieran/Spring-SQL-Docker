@@ -25,6 +25,12 @@ spring.datasource.url=jdbc:mysql://mysqldb:3306/db_url
 Spring boot, Spring MVC, Spring JPA, MySQL, Docker, Docker Toolbox, Git
 
 ## **_DOWNLOADING:_**
+First create a Docker network
+
+```
+docker network create url-mysql
+```
+
 The application runs in two separate docker containers that are on my own repository on docker hub, you can download and run them both here: (run in order)
 	
 ```
