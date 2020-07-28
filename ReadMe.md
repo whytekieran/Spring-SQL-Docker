@@ -11,7 +11,7 @@ spring.datasource.url=jdbc:mysql://192.168.99.100:3306/db_url
 The IP 192.168.99.100 is unique to docker toolbox. Using localhost didnt work. If you dont use Docker toolbox to download from docker hub this configuration
 may possibly not work. 
 	
-I cannot test with docker desktop and adding the ip of docker toolbox may be specific for this project, considering this id recommend the easiest solution is using docker
+Testing was done locally so was not tested with docker desktop and adding the ip of docker toolbox may be specific for this project, considering this id recommend the easiest solution is using docker
 toolbox (which always comes with default ip 192.168.99.100) for pulling and running the containers.	
 	
 **_Possible workaround:_**
